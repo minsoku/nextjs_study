@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <main>
-      login page.tsx
+        로그인 모달
     </main>
   )
 }

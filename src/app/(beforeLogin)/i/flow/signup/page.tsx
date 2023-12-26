@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main>
-      signup page.tsx
+      회원가입 모달.
     </main>
   )
 }
