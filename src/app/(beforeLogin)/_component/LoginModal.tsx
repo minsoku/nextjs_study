@@ -1,5 +1,5 @@
 "use client";
-import {useState} from 'react'
+import {ChangeEventHandler, useState} from 'react'
 import style from '@/app/(beforeLogin)/_component/login.module.css';
 import {useRouter} from 'next/navigation'
 
@@ -15,9 +15,11 @@ export default function LoginModal () {
 	const onClickClose = () => {
 		router.back ();
 	};
-	const onChangeId = () => {
+	const onChangeId: ChangeEventHandler<HTMLInputElement> = (e) => {
+		setId(e.target.value);
 	};
-	const onChangePassword = () => {
+	const onChangePassword: ChangeEventHandler<HTMLInputElement> = (e) => {
+		setPassword(e.target.value);
 	};
 
 	return (

@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main>
-      message page.tsx
+      메시지페이지
     </main>
   )
 }

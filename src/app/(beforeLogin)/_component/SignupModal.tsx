@@ -80,9 +80,9 @@ export default function SignupModal () {
 							</div>
 							<div className={style.inputDiv}>
 								<label className={style.inputLabel} htmlFor="password">비밀번호</label>
-								<input id="password" className={style.input} type="text" placeholder=""
+								<input id="password" className={style.input} type="password" placeholder=""
 								       value={password}
-								       onChange={onChangeNickname}/>
+								       onChange={onChangePassword}/>
 							</div>
 							<div className={style.inputDiv}>
 								<label className={style.inputLabel} htmlFor="image">프로필</label>

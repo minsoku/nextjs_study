@@ -1,7 +1,7 @@
 export default function Home () {
 	return (
 		<main>
-			explore page.tsx
+			검색페이지
 		</main>
 	)
 }
