@@ -7,7 +7,6 @@ export default function LogoutButton() {
     nickname: '밍소쿠',
     image: '/zLogo.jpeg',
   }
-
   const onLogout = () => {};
   return (
     <button className={style.logOutButton} onClick={onLogout}>
