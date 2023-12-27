@@ -1,7 +1,7 @@
 import type {Metadata} from 'next'
 import {Inter} from 'next/font/google'
 import './globals.css'
-import styles from './page.module.css';
+import styles from '@/app/(beforeLogin)/_component/main.module.css';
 import {Props} from '@/app/types'
 
 const inter = Inter ({subsets: ['latin']})
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export default function RootLayout ({children}: Props) {
 	return (
 		<html lang="en">
-		<body className={styles.container}>
-		{children}
-		</body>
+			<body className={styles.container}>
+				{children}
+			</body>
 		</html>
 	)
 }
