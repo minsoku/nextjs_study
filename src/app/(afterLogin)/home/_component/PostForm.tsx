@@ -7,7 +7,7 @@ export default function PostForm() {
   const imageRef = useRef<HTMLInputElement>(null);
   const [content, setContent] = useState('');
   const me = {
-    id: 'induck',
+    id: 'zerohch0',
     image: '/zLogo.jpeg'
   };
 
@@ -27,7 +27,7 @@ export default function PostForm() {
     <form className={style.postForm} onSubmit={onSubmit}>
       <div className={style.postUserSection}>
         <div className={style.postUserImage}>
-          <img src={me.image} alt={me.id}/>
+          <img src={me.image} alt={me.id} />
         </div>
       </div>
       <div className={style.postInputSection}>
@@ -35,7 +35,7 @@ export default function PostForm() {
         <div className={style.postButtonSection}>
           <div className={style.footerButtons}>
             <div className={style.footerButtonLeft}>
-              <input type="file" name="imageFiles" multiple hidden ref={imageRef}/>
+              <input type="file" name="imageFiles" multiple hidden ref={imageRef} />
               <button className={style.uploadButton} type="button" onClick={onClickButton}>
                 <svg width={24} viewBox="0 0 24 24" aria-hidden="true">
                   <g>

@@ -1,3 +1,3 @@
 import {ReactNode} from 'react'
 
-export type Props = { children: ReactNode, modal?: ReactNode };
+export type DefaultType = { children: ReactNode, modal?: ReactNode };

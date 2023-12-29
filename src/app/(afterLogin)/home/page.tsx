@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className={style.main}>
       <TabProvider>
-        <Tab />
+        <Tab/>
         <PostForm />
         <Post/>
         <Post/>

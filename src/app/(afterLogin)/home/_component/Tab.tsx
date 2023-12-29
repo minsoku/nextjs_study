@@ -11,6 +11,7 @@ export default function Tab() {
   const onClickFol = () => {
     setTab('fol');
   }
+
   return (
     <div className={style.homeFixed}>
       <div className={style.homeText}>홈</div>

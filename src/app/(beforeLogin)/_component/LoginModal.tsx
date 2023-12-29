@@ -1,7 +1,8 @@
 "use client";
-import {ChangeEventHandler, useState} from 'react'
+import {ChangeEventHandler, FormEventHandler, useState} from 'react'
 import style from '@/app/(beforeLogin)/_component/login.module.css';
 import {useRouter} from 'next/navigation'
+import {signIn} from "next-auth/react";
 
 export default function LoginModal () {
 	const [id, setId] = useState ('');
@@ -10,7 +11,22 @@ export default function LoginModal () {
 
 	const router = useRouter ();
 
-	const onSubmit = () => {
+	const onSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+		e.preventDefault();
+		setMessage('')
+
+		try{
+			await signIn("credentials", {
+				username: id,
+				password,
+				redirect: false,
+			})
+			router.replace('/home')
+		} catch(err) {
+			console.error('---login---',err)
+			setMessage('아이디와 비밀번호가 일치하지 않습니다.');
+		}
+
 	};
 	const onClickClose = () => {
 		router.back ();

@@ -1,14 +1,16 @@
 "use client"
 
-import style from './followRecommand.module.css'
-export default function FollowRecommand() {
+import style from './followRecommend.module.css';
+
+export default function FollowRecommend() {
   const onFollow = () => {};
 
   const user = {
-    id: 'induck',
-    nickname: 'induck',
+    id: 'elonmusk',
+    nickname: 'Elon Musk',
     image: '/zLogo.jpeg'
   };
+
   return (
     <div className={style.container}>
       <div className={style.userLogoSection}>

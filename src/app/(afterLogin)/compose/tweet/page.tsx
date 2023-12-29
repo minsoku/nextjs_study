@@ -1,8 +1,7 @@
+import Home from "@/app/(afterLogin)/home/page";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main>
-      compose tweet page.tsx
-    </main>
+    <Home />
   )
 }
