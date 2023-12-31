@@ -27,8 +27,9 @@ export default async (prevState: any, formData: FormData) => {
     if (response.status === 403) {
       return { message: 'user_exists' };
     }
-    console.log('---',await response.json())
+    console.log(await response.json())
     shouldRedirect = true;
+    // 회원가입 후 바로 로그인까지 같이 하기
     await signIn("credentials", {
       username: formData.get('id'),
       password: formData.get('password'),

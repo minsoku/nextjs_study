@@ -1,13 +1,21 @@
 "use client"
 
 import style from './followRecommend.module.css';
+import {useSession} from "next-auth/react";
+import {redirect, useRouter} from "next/navigation";
 
 export default function FollowRecommend() {
-  const onFollow = () => {};
-
+  const {data: session} = useSession();
+  const router = useRouter ();
+  const onFollow = () => {
+    if (!session?.user) {
+      router.push('/i/flow/login')
+    }
+    return null;
+  };
   const user = {
-    id: 'elonmusk',
-    nickname: 'Elon Musk',
+    id: 'induck',
+    nickname: 'induck',
     image: '/zLogo.jpeg'
   };
 

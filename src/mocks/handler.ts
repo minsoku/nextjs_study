@@ -10,8 +10,8 @@ function generateDate() {
   });
 }
 const User = [
-  {id: 'induck', nickname: 'induck', image: '/yRsRRjGO.jpg'},
-  {id: 'minsoku', nickname: 'minsoku', image: '/5Udwvqim.jpg'},
+  {id: 'induck', nickname: '인덕이', image: '/yRsRRjGO.jpg'},
+  {id: 'minsoku', nickname: '밍소쿠', image: '/zLogo.jpeg'},
   {id: 'yongyong', nickname: '서빨용', image: faker.image.avatar()},
 ]
 const Posts = [];
@@ -310,15 +310,15 @@ export const handlers = [
   http.get('/api/trends', ({ request }) => {
     return HttpResponse.json(
       [
-        {tagId: 1, title: '제로초', count: 1264},
-        {tagId: 2, title: '원초', count: 1264},
-        {tagId: 3, title: '투초', count: 1264},
-        {tagId: 4, title: '쓰리초', count: 1264},
-        {tagId: 5, title: '포초', count: 1264},
-        {tagId: 6, title: '파이브초', count: 1264},
-        {tagId: 7, title: '식스초', count: 1264},
-        {tagId: 8, title: '세븐초', count: 1264},
-        {tagId: 9, title: '나인초', count: 1264},
+        {tagId: 1, title: '밍1', count: 1264},
+        {tagId: 2, title: '밍2', count: 1264},
+        {tagId: 3, title: '밍3', count: 1264},
+        {tagId: 4, title: '밍4', count: 1264},
+        {tagId: 5, title: '밍5', count: 1264},
+        {tagId: 6, title: '밍6', count: 1264},
+        {tagId: 7, title: '밍7', count: 1264},
+        {tagId: 8, title: '밍8', count: 1264},
+        {tagId: 9, title: '밍9', count: 1264},
       ]
     )
   }),

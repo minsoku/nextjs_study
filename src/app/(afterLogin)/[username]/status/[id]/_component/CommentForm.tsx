@@ -10,7 +10,7 @@ export default function CommentForm() {
   const onSubmit = () => {}
   const onChange = () => {}
   const me = {
-    id: 'zerohch0',
+    id: 'minsoku',
     image: '/zLogo.jpeg'
   };
 

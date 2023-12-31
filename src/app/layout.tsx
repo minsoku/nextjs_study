@@ -3,6 +3,7 @@ import {Inter} from 'next/font/google'
 import './globals.css'
 import {DefaultType} from '@/app/types'
 import {MSWComponent} from "@/app/_component/MSWComponent";
+import AuthSession from "@/app/_component/AuthSession";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -15,8 +16,10 @@ export default function RootLayout({children}: DefaultType) {
   return (
     <html lang="en">
       <body>
-        <MSWComponent/>
-        {children}
+        <AuthSession>
+          <MSWComponent/>
+          {children}
+        </AuthSession>
       </body>
     </html>
   )
