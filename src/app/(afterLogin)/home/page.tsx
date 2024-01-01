@@ -6,6 +6,7 @@ import Post from "@/app/(afterLogin)/_component/Post";
 import {dehydrate, HydrationBoundary, QueryClient} from "@tanstack/react-query";
 import PostRecommends from "@/app/(afterLogin)/home/_component/PostRecommends";
 import {getPostRecommends} from "@/app/(afterLogin)/home/_lib/getPostRecommends";
+import TabDecider from "@/app/(afterLogin)/home/_component/TabDecider";
 
 
 export default async function Home() {
@@ -15,12 +16,12 @@ export default async function Home() {
   // queryClient.getQueryData(['posts', 'recommends'])
 
   return (
-    <main className={style.main}>
+    <main className={style.main}>x
       <HydrationBoundary state={dehydratedState}>
         <TabProvider>
           <Tab/>
           <PostForm/>
-          <PostRecommends />
+          <TabDecider />
         </TabProvider>
       </HydrationBoundary>
     </main>

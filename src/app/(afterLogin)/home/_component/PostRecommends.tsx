@@ -31,19 +31,14 @@ export default function PostRecommends() {
   //     !isFetching && hasNextPage && fetchNextPage();
   //   }
   // }, [inView, isFetching, hasNextPage, fetchNextPage]);
-  //
-  // return (
-  //   <>
-  //     {data?.pages.map((page, i) => (
-  //       <Fragment key={i}>
-  //         {page.map((post) => <Post key={post.postId} post={post}/>)}
-  //       </Fragment>))}
-  //     <div ref={ref} style={{ height: 50 }} />
-  //   </>
-  // )
-  const {data} = useQuery<IPost[]>({queryKey: ['posts', 'recommends'], queryFn: getPostRecommends})
 
-  return data?.map((post) => (
-    <Post key={post.postId} post={post} />
-  ))
+  return (
+    <>
+      {/*{data?.pages.map((page, i) => (*/}
+      {/*  <Fragment key={i}>*/}
+      {/*    {page.map((post) => <Post key={post.postId} post={post}/>)}*/}
+      {/*  </Fragment>))}*/}
+      {/*<div ref={ref} style={{ height: 50 }} />*/}
+    </>
+  )
 }

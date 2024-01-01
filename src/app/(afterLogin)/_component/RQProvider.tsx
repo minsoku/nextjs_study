@@ -17,7 +17,7 @@ function RQProvider({children}: Props) {
           retryOnMount: true,
           refetchOnReconnect: false,
           retry: false,
-        },
+        }, 
       },
     })
   );

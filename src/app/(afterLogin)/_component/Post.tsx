@@ -5,7 +5,6 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import 'dayjs/locale/ko';
 import ActionButtons from "@/app/(afterLogin)/_component/ActionButtons";
 import PostArticle from "@/app/(afterLogin)/_component/PostArticle";
-import {faker} from '@faker-js/faker';
 import PostImages from "@/app/(afterLogin)/_component/PostImages";
 import {MouseEventHandler} from "react";
 import {Post} from "@/model/Post";
@@ -17,12 +16,12 @@ type Props = {
   noImage?: boolean
   post: Post
 }
-export default function Post({ noImage, post }: Props) {
+export default function Post({noImage, post}: Props) {
+  if (!post) return null;
   let target = post;
   if (post.Original) {
     target = post.Original;
   }
-
   const stopPropagation: MouseEventHandler<HTMLAnchorElement> = (e) => {
     e.stopPropagation();
   }
@@ -49,7 +48,7 @@ export default function Post({ noImage, post }: Props) {
           </div>
           <div>{target.content}</div>
           <div>
-            <PostImages post={target} />
+            <PostImages post={target}/>
           </div>
           <ActionButtons/>
         </div>

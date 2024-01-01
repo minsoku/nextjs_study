@@ -10,7 +10,7 @@ function generateDate() {
   });
 }
 const User = [
-  {id: 'induck', nickname: '인덕이', image: '/yRsRRjGO.jpg'},
+  {id: 'induck', nickname: '인덕이', image: '/zLogo.jpg'},
   {id: 'minsoku', nickname: '밍소쿠', image: '/zLogo.jpeg'},
   {id: 'yongyong', nickname: '서빨용', image: faker.image.avatar()},
 ]
@@ -47,8 +47,7 @@ export const handlers = [
       }
     })
   }),
-  http.get('/api/postRecommends', async ({ request }) => {
-    await delay(3000);
+  http.get('/api/postRecommends', ({ request }) => {
     const url = new URL(request.url)
     const cursor = parseInt(url.searchParams.get('cursor') as string) || 0
     return HttpResponse.json(
