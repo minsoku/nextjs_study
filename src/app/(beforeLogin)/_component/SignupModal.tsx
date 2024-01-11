@@ -16,9 +16,9 @@ function showMessage(message: string) {
 	if (message === 'no_password') {
 		return '비밀번호를 입력하세요.';
 	}
-	if (message === 'no_image') {
-		return '이미지를 업로드하세요.';
-	}
+	// if (message === 'no_image') {
+	// 	return '이미지를 업로드하세요.';
+	// }
 	if (message === 'user_exists') {
 		return '이미 사용 중인 아이디입니다.';
 	}
@@ -56,11 +56,11 @@ export default function SignupModal() {
 											 required
 								/>
 							</div>
-							<div className={style.inputDiv}>
-								<label className={style.inputLabel} htmlFor="image">프로필</label>
-								<input id="image" name="image" required className={style.input} type="file" accept="image/*"
-								/>
-							</div>
+							{/*<div className={style.inputDiv}>*/}
+							{/*	<label className={style.inputLabel} htmlFor="image">프로필</label>*/}
+							{/*	<input id="image" name="image" required className={style.input} type="file" accept="image/*"*/}
+							{/*	/>*/}
+							{/*</div>*/}
 						</div>
 						<div className={style.modalFooter}>
 							<button type="submit" className={style.actionButton} disabled={pending}>가입하기</button>
